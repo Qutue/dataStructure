@@ -43,7 +43,9 @@
         "sstream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "queue": "cpp",
+        "stl_queue.h": "c"
     },
     "files.exclude": {
         "**/.git": true,
@@ -52,9 +54,9 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
-        "**/*.out":true,
-        ".clang-format":true,
-        "^([^.]+)$":true,
+        "**/*.out": true,
+        ".clang-format": true,
+        "^([^.]+)$": true,
     },
     "code-runner.saveFileBeforeRun": true
 }

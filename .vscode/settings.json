@@ -58,5 +58,6 @@
         ".clang-format": true,
         "^([^.]+)$": true,
     },
-    "code-runner.saveFileBeforeRun": true
+    "code-runner.saveFileBeforeRun": true,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }

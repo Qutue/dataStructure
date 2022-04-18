@@ -6,3 +6,5 @@ tempCodeRunnerFile.cpp
 
 .gitignore
 Stack/.LStack.cpp.swp
+*.exe
+.vscode

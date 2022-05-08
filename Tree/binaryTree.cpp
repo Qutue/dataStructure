@@ -16,23 +16,24 @@ int depth(BinTree T);
 int main() {
 	BinTree T = new BinNode;
 	creatBinTree(T);
-	cout << "é€’å½’å…ˆåºéå†: ";
+	cout << "µİ¹éÏÈĞò±éÀú: ";
 	preorderTraversal(T);
 	cout << endl;
-	cout << "é€’å½’ä¸­åºéå†: ";
+	cout << "µİ¹éÖĞĞò±éÀú: ";
 	inorderTraversal(T);
 	cout << endl;
-	cout << "é€’å½’ååºéå†: ";
+	cout << "µİ¹éºóĞò±éÀú: ";
 	postorderTraversal(T);
 	cout << endl;
-	cout << "éé€’å½’å…ˆåºéå†: ";
+	cout << "·Çµİ¹éÖĞĞò±éÀú: ";
 	inorderTraversal2(T);
-	cout << "å¶å­èŠ‚ç‚¹æ•°ç›®: " << leafNodeNum(T) << endl;
-	cout << "æ ‘çš„æ·±åº¦: " << depth(T);
+	cout << endl;
+	cout << "Ò¶×Ó½ÚµãÊıÄ¿: " << leafNodeNum(T) << endl;
+	cout << "Ê÷µÄÉî¶È: " << depth(T);
 	cout << endl;
 	return 0;
 }
-//æŒ‰ç…§å…ˆåºéé¡ºåºé€’å½’åˆ›å»º
+//°´ÕÕÏÈĞò±éË³Ğòµİ¹é´´½¨
 void creatBinTree(BinTree& T) {
 	TElementType ch;
 	cin >> ch;
@@ -44,7 +45,7 @@ void creatBinTree(BinTree& T) {
 		creatBinTree(T->rchild);
 	}
 }
-//é€’å½’å…ˆåºéå†
+//µİ¹éÏÈĞò±éÀú
 void preorderTraversal(BinTree T) {
 	if (T) {
 		cout << T->data << " ";
@@ -52,7 +53,7 @@ void preorderTraversal(BinTree T) {
 		preorderTraversal(T->rchild);
 	}
 }
-//é€’å½’ä¸­åºéå†
+//µİ¹éÖĞĞò±éÀú
 void inorderTraversal(BinTree T) {
 	if (T) {
 		inorderTraversal(T->lchild);
@@ -60,7 +61,7 @@ void inorderTraversal(BinTree T) {
 		inorderTraversal(T->rchild);
 	}
 }
-//é€’å½’ååºéå†
+//µİ¹éºóĞò±éÀú
 void postorderTraversal(BinTree T) {
 	if (T) {
 		postorderTraversal(T->lchild);
@@ -68,7 +69,7 @@ void postorderTraversal(BinTree T) {
 		cout << T->data << " ";
 	}
 }
-// éé€’å½’ä¸­åºéå†
+// ·Çµİ¹éÖĞĞò±éÀú
 void inorderTraversal2(BinTree T) {
 	stack<BinNode*> S;
 	BinNode* p = T;
@@ -84,14 +85,15 @@ void inorderTraversal2(BinTree T) {
 			p = q->rchild;
 		}
 	}
+	return;
 }
-//é€’å½’æ±‚å¶å­èŠ‚ç‚¹æ•°ç›®
+//µİ¹éÇóÒ¶×Ó½ÚµãÊıÄ¿
 int leafNodeNum(BinTree T) {
 	if (T == NULL) return 0;
 	if (T->lchild == NULL && T->rchild == NULL) return 1;
 	return leafNodeNum(T->lchild) + leafNodeNum(T->rchild);
 }
-//é€’å½’æ±‚æ ‘çš„æ·±åº¦
+//µİ¹éÇóÊ÷µÄÉî¶È
 int depth(BinTree T) {
 	if (T == NULL) return 0;
 	return max(depth(T->lchild), depth(T->rchild)) + 1;
